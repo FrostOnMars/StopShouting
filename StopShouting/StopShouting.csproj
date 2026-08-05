@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Stop Shouting</AssemblyName>
+    <ApplicationIcon>silenced.ico</ApplicationIcon>
+    <Title>Stop Shouting</Title>
+    <Company>Mikayla Martin</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="silenced.ico" />
+  </ItemGroup>
+
+</Project>

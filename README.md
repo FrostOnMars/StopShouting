@@ -33,7 +33,6 @@ Receive:
 
 <img width="794" height="446" alt="silenced" src="https://github.com/user-attachments/assets/c823ad27-7aa4-40b5-9fc6-659fa91f382a" />
 
-Handle nurse requests with ease.
 
 ### Confirm the deed
 
@@ -52,12 +51,3 @@ Many requests arrive in ALL CAPS.
 Rather than manually fixing capitalization every time, I built a tool to do the work for me while giving me an excuse to practice WPF, regex processing, and text normalization.
 
 ---
-
-## Example
-
-### Input
-
-```text
-HEY MIKAYLA, MY POWER APPS ISNT WORKING?
-
-ITS NOT LETTING ME GET INTO TO ORDER WOUND CARE SUPPLIES.

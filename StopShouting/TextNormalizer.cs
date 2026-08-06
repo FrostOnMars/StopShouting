@@ -1,4 +1,6 @@
 ﻿using System.Text.RegularExpressions;
+// ReSharper disable IdentifierTypo
+// ReSharper disable StringLiteralTypo
 
 namespace StopShouting;
 
@@ -7,16 +9,36 @@ public static class TextNormalizer
     private static readonly Dictionary<string, string> BusinessTerms =
         new(StringComparer.OrdinalIgnoreCase)
         {
-            ["power apps"] = "PowerApps",
-            ["sharepoint"] = "SharePoint",
+            ["adobe"] = "Adobe",
+            ["after effects"] = "After Effects",
+            ["athena"] = "Athena",
+            ["azure"] = "Azure",
+            ["bonafide"] = "Bonafide",
+            ["canva"] = "Canva",
+            ["drx"] = "DRX",
+            ["excel"] = "Excel",
+            ["figma"] = "Figma",
+            ["illustrator"] = "Illustrator",
+            ["indesign"] = "InDesign",
+            ["lightroom"] = "Lightroom",
+            ["m365"] = "M365",
+            ["microsoft"] = "Microsoft",
             ["onedrive"] = "OneDrive",
             ["outlook"] = "Outlook",
-            ["teams"] = "Teams",
-            ["excel"] = "Excel",
-            ["word"] = "Word",
+            ["photoshop"] = "Photoshop",
+            ["power apps"] = "PowerApps",
+            ["power automate"] = "Power Automate",
             ["power bi"] = "Power BI",
-            ["microsoft"] = "Microsoft",
-            ["m365"] = "M365"
+            ["power fx"] = "Power Fx",
+            ["power pages"] = "Power Pages",
+            ["power shell"] = "PowerShell",
+            ["power virtual agents"] = "Power Virtual Agents",
+            ["premiere pro"] = "Premiere Pro",
+            ["rx4route"] = "RX4Route",
+            ["sharepoint"] = "SharePoint",
+            ["sketch"] = "Sketch",
+            ["teams"] = "Teams",
+            ["word"] = "Word",
         };
 
     private static readonly Dictionary<string, string> Names =
@@ -137,8 +159,8 @@ public static class TextNormalizer
 
     private static string NormalizeWhitespace(string input)
     {
-        string[] lines = input.Split(
-            new[] { "\r\n", "\n" },
+        var lines = input.Split(
+            ["\r\n", "\n"],
             StringSplitOptions.None);
 
         for (int i = 0; i < lines.Length; i++)
@@ -146,7 +168,7 @@ public static class TextNormalizer
             lines[i] = Regex.Replace(lines[i].Trim(), @"\s+", " ");
         }
 
-        string result = string.Join(Environment.NewLine, lines);
+        var result = string.Join(Environment.NewLine, lines);
 
         result = Regex.Replace(
             result,
